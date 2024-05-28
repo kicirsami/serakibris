@@ -5,7 +5,10 @@ Merhaba! Sera Kıbrıs, akıllı sera otomasyon sistemi bitki yetiştiriciliği 
 Arduino tabanlı sensörler, sera ortamındaki ışık, fan, su motoru, toprak nem seviyesi, sıcaklık ve nem gibi önemli parametreleri sürekli olarak ölçer. Mobil uygulama, bu sensörlerden alınan verileri gerçek zamanlı olarak kullanıcıya sunar ve kullanıcıların sera koşullarını uzaktan izlemesine ve kontrol etmesine olanak tanır.
 
 Kullanıcılar, mobil uygulama aracılığıyla sera koşullarını takip edebilir, gerektiğinde ayarlamalar yapabilir ve otomatik kontrol özelliklerini kullanarak sera ortamını optimize edebilirler.
-
+## Katkıda Bulunanlar
+- [kicirsami] - Backend ve genel geliştirmeler
+- [CodeWithMuzo] - Önyüz geliştirmeleri
+  
 ## İçindekiler
 
 - [Kurulum](#kurulum)
@@ -125,8 +128,8 @@ Her türlü katkıya açığız! Projeye katkıda bulunan herkese teşekkür ede
 
 Herhangi bir sorunuz, öneriniz veya geri bildiriminiz varsa, bize ulaşmaktan çekinmeyin:
 
-- Proje sahibi: [kicirsami](https://github.com/kicirsami)
-- E-posta: [kicirsami06@gmail.com](mailto:kicirsami06@gmail.com)
+- Proje sahibi: [kicirsami](https://github.com/kicirsami),[CodeWithMuzo](https://github.com/CodeWithMuzo)
+- E-posta: [kicirsami06@gmail.com](mailto:kicirsami06@gmail.com),[muzafferkhan571.1571@gmail.com](mailto:muzafferkhan571.1571@gmail.com)
 - Sera Kıbrıs E-posta: [serakibris@outlook.com](mailto:serakibris@outlook.com)
 
 Ayrıca, projenin GitHub sayfasını ziyaret ederek diğer katkıda bulunanlarla iletişime geçebilir ve proje hakkında daha fazla bilgi edinebilirsiniz.
