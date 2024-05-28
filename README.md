@@ -1,4 +1,4 @@
-# Sera Kibris 
+# Sera Kıbrıs 
 
 Merhaba! Sera Kıbrıs, akıllı sera otomasyon sistemi bitki yetiştiriciliği için özel olarak tasarlanmış bir çözümdür. Projemiz, sera ortamında oluşan değişkenleri izleyip kontrol etmek için Arduino tabanlı sensörler ve bir mobil uygulama kullanmaktadır.
 
