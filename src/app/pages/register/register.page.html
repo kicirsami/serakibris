@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Çalışan Ekle</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content scrollY="false">
+  <div class="container">
+    <div class="form">
+      <div class="form-group">
+        <label for="profile-image">Profil Resmi</label>
+        <input type="file" (change)="uploadFile($event)"> 
+      </div>
+      <div class="form-group">
+        <label for="username">Kullanıcı Adı</label>
+        <input type="text" id="username" name="username" [(ngModel)]="userData.username" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Şifre</label>
+        <input type="password" id="password" name="password" [(ngModel)]="userData.password" required>
+      </div>
+
+      <div class="form-group">
+        <label for="fullname">İsim Soyisim</label>
+        <input type="text" id="fullname" name="fullname" [(ngModel)]="userData.fullname" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Telefon Numarası</label>
+        <input type="tel" id="phone" name="phone" [(ngModel)]="userData.phone" pattern="[0-9]{4}[0-9]{3}[0-9]{4}" required>
+        <div *ngIf="!isPhoneValid()" class="error">
+          Geçerli bir telefon numarası girin.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-posta Adresi</label>
+        <input type="email" id="email" name="email" [(ngModel)]="userData.email" required>
+        <div *ngIf="!isEmailValid()" class="error">
+          Geçerli bir e-posta adresi girin.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="role">Kullanıcı Türü</label>
+        <select id="role" name="role_id" [(ngModel)]="userData.role_id" required>
+          <option value="0">Seçiniz</option>
+          <option value="1">Yönetici</option>
+          <option value="2">Çalışan</option>
+        </select>
+        <div *ngIf="userData.role_id === 0" class="error">
+          Bir kullanıcı türü seçin.
+        </div>
+      </div>
+
+      <button type="button" (click)="onSubmit()">Çalışanı Kaydet</button>
+    </div>
+  </div>
+</ion-content>

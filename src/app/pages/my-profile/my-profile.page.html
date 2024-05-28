@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/profile" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Profilim</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content scrollY="false">
+  <div class="container">
+    <div class="profile-container">
+      <div class="icon-container" (click)="openFileInput()">
+        <img src="../../../assets/icon/photo-add.png" alt="Photo Add Icon">
+      </div>
+    
+      <div class="profile-picture">
+        <input id="file-upload" type="file" (change)="onFileSelected($event)" capture="user" style="display: none;">
+        <img [src]="selectedPhoto || user.img ? selectedPhoto || user.img : getProfileImage()" alt="Profil Resmi">
+      </div>
+    </div>
+
+    <div class="green-background">
+      <div class="form">
+        <h2>Kişisel Bilgiler</h2>
+        <div class="form-group">
+          <label for="fullName">Adı Soyadı</label>
+          <input type="text" id="fullName" name="fullName" [(ngModel)]="user.fullname" required>
+        </div>
+        <div class="form-group">
+          <label for="phoneNumber">Telefon Numarası</label>
+          <input type="tel" id="phoneNumber" name="phoneNumber" [(ngModel)]="user.phone" required>
+        </div>
+        <div class="form-group">
+          <label for="email">E-posta Adresi</label>
+          <input type="email" id="email" name="email" [(ngModel)]="user.email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Şifre</label>
+          <div class="password-input-container">
+            <input type="password" id="password" name="password" [(ngModel)]="user.password" required>
+            <ion-icon name="eye" slot="end" class="toggle-password" (click)="togglePasswordVisibility()"></ion-icon>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="userType">Kullanıcı Türü</label>
+          <select id="userType" name="userType" [(ngModel)]="user.role_id" required>
+            <option *ngFor="let role of roles" [value]="role.id">{{ role.name }}</option>
+          </select>
+        </div>
+        <button type="submit" (click)="onSubmit()">Değişiklikleri Kaydet</button>
+      </div>
+    </div>
+  </div>
+</ion-content>

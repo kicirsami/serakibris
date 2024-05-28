@@ -1,0 +1,22 @@
+<nav class="nav-bar">
+  <ul>
+    <li>
+      <a routerLink="/home" routerLinkActive="active">
+        <img src="../../../assets/icon/Home.png" alt="Anasayfa">
+        <span>Anasayfa</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/chat" routerLinkActive="active">
+        <img src="../../../assets/icon/Chat.png" alt="Sohbet">
+        <span>Sohbet</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/profile" routerLinkActive="active" (click)="goToProfile()">
+        <img src="../../../assets/icon/Profile.png" alt="Profil">
+        <span>Profil</span>
+      </a>
+    </li>
+  </ul>
+</nav>

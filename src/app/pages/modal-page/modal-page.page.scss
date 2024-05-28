@@ -1,0 +1,62 @@
+ion-header {
+    ion-toolbar {
+      --background: green; /* Arka plan rengi */
+      --color: white; /* Yazı rengi */
+    }
+    ion-button {
+        --color: white; /* Buton yazı rengi */
+        --padding-start: 8px; /* Çarpı işaretinden önceki boşluk */
+      --padding-end: 8px; /* Çarpı işaretinden sonraki boşluk */
+
+      }
+      .close-button {
+        font-size: 24px; /* Çarpı işareti font büyüklüğü */
+        margin-top: 2px; /* İkonun hizalama ayarı */
+      }
+      
+  }
+  input[type="file"] {
+    display:none; /* Gerçek dosya seçme düğmesini gizle */
+  }
+  
+  /* Kullanıcıya sunulan stil öğesi (label) */
+  .custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+  }
+  
+  /* Kullanıcıya sunulan stil öğesinin üzerine gelindiğinde */
+  .custom-file-upload:hover {
+    background-color: #e0e0e0;
+  }
+
+  ion-item {
+    --background: white; /* Arka plan rengi */
+    --color: black; /* Yazı rengi */
+    --padding-start: 20px; /* İçeriğin sol iç boşluğunu ayarla */
+    --padding-end: 20px; /* İçeriğin sağ iç boşluğunu ayarla */
+  }
+  
+  
+  .no-line{
+    --inner-border-width: 0; 
+  }
+
+  ion-content {
+    --background: white; /* Arka plan rengi */
+
+  }
+  ion-button {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: 350px; 
+    --color: white; /* Buton yazı rengi */
+    --background:green;
+    text-transform: initial;
+    --padding-start: 20px; /* İçeriğin sol iç boşluğunu ayarla */
+    --padding-end: 20px; /* İçeriğin sağ iç boşluğunu ayarla */
+      }

@@ -1,0 +1,95 @@
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-title class="toolbar-title">{{ sera?.name }}</ion-title>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/home" text=""></ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+ 
+  <ion-content class="content"  scrollY="true">
+    <div class="container">
+      <div class="image-container">
+        <img src="../../../assets/image/greenhouse.jpg" alt="Resim" class="image">
+      </div>
+      <div class="sensorContainer">
+        <div class="row">
+          <div class="col green-background">
+            <div class="content-wrapper">
+              <img src="../../../assets/icon/greenhousePageİcons/air-humidity-icon.png" alt="Icon">
+              <p class="sensorTitle">Hava Nem Derecesi</p>
+              <p class="sensorDegree">Derece: {{ sera?.humidity || 'N/A' }}</p>
+            </div>
+          </div>
+          <div class="col green-background">
+            <div class="content-wrapper">
+              <img src="../../../assets/icon/greenhousePageİcons/soil-moisture-icon.png" alt="Icon">
+              <p class="sensorTitle">Toprak Nem Derecesi</p>
+              <p class="sensorDegree">Derece: {{ sera?.soil_humidity || 'N/A' }}</p>
+            </div>
+          </div>
+          <div class="col green-background">
+            <div class="content-wrapper">
+              <img src="../../../assets/icon/greenhousePageİcons/water-level-icon.png" alt="Icon">
+              <p class="sensorTitle waterTitle">Su Seviyesi</p>
+              <p class="sensorDegree water">Seviye: {{ sera?.water_level !== undefined && sera?.water_level !== null ? sera.water_level : 'N/A' }}</p>
+            </div>
+          </div>
+          <div class="col green-background">
+            <div class="content-wrapper">
+              <img src="../../../assets/icon/greenhousePageİcons/temperature-icon.png" alt="Icon">
+              <p class="sensorTitle">Ortam Sıcaklığı</p>
+              <p class="sensorDegree">Derece: {{ sera?.temperature || 'N/A' }}</p>
+            </div>
+          </div>
+          <div class="col" [ngClass]="{'active-background-light': isToggleOnIsik, 'notActive-background-light': !isToggleOnIsik}">
+            <img class="light" [src]="isToggleOnIsik ? '../../../assets/icon/greenhousePageİcons/light-active-icon.png' : '../../../assets/icon/greenhousePageİcons/light-notActive-icon.png'" alt="Işık">
+            <p [ngClass]="{'notActive-text-light': !isToggleOnIsik, 'active-text-light': isToggleOnIsik}">Işık</p>
+            <ion-toggle slot="end" [checked]="sera?.light === 1" [ngClass]="{'notActiveLight-toggle': !isToggleOnIsik, 'activeLight-toggle': isToggleOnIsik}" (ionChange)="toggleChangedIsik()"></ion-toggle>
+          </div>
+          <div class="col" [ngClass]="{'active-background-fan': isToggleOnFan, 'notActive-background-fan': !isToggleOnFan}">
+            <img class="fan" [src]="isToggleOnFan ? '../../../assets/icon/greenhousePageİcons/fan-active-icon.png' : '../../../assets/icon/greenhousePageİcons/fan-notActive-icon.png'" alt="Fan">
+            <p [ngClass]="{'notActive-text-fan': !isToggleOnFan, 'active-text-fan': isToggleOnFan}">Fan</p>
+            <ion-toggle slot="end" [checked]="sera?.fan === 1" [ngClass]="{'notActiveLight-toggle': !isToggleOnFan, 'activeLight-toggle': isToggleOnFan}" (ionChange)="toggleChangedFan()"></ion-toggle>
+          </div>
+          <div class="col" [ngClass]="{'active-background-water-motor': isToggleOnWater, 'notActive-background-water-motor': !isToggleOnWater}">
+            <img class="water-motor" [src]="isToggleOnWater ? '../../../assets/icon/greenhousePageİcons/water-motorActive-icon.png' : '../../../assets/icon/greenhousePageİcons/water-motorNotActive-icon.png'" alt="Water Motor">
+            <p [ngClass]="{'notActive-text-light': !isToggleOnWater, 'active-text-light': isToggleOnWater}">Su Motoru</p>
+            <ion-toggle slot="end" [checked]="sera?.water_motor === 1" [ngClass]="{'notActiveWaterMotor-toggle': !isToggleOnWater, 'activeWaterMotor-toggle': isToggleOnWater}" (ionChange)="toggleChangedWater()"></ion-toggle>
+          </div>
+        </div>
+
+        <div class="delete-container">
+          <div class="delete-button" (click)="showDeleteConfirmation($event)">
+            <img class="trash-icon" src="../../../assets/icon/trash-icon.png" alt="Trash">
+            <span class="delete-text">Sera Sil</span>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </ion-content>
+  <nav class="nav-bar">
+    <ul>
+      <li>
+        <a routerLink="/home" routerLinkActive="active">
+          <img src="../../../assets/icon/notActiveHome.png" alt="Anasayfa" class="icon">
+          <span>Anasayfa</span>
+        </a>
+      </li>
+      <li>
+        <a (click)="onClickChat()" routerLinkActive="active">
+          <img src="../../../assets/icon/notActiveChat.png" alt="Sohbet" class="icon">
+          <span>Sohbet</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/profile" routerLinkActive="active">
+          <img src="../../../assets/icon/notActiveProfile.png" alt="Profil" class="icon">
+          <span>Profil</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+

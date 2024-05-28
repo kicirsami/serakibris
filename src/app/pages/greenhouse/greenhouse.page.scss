@@ -1,0 +1,330 @@
+.container {
+    background-color: #ffffff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  ion-back-button {
+    color: #008636;
+  }
+
+  ion-title {
+    color: #008636;
+    font-size: 20px;
+  }
+
+  .nav-bar {
+    position: fixed;
+    bottom: 0; 
+    width: 100%; 
+    }
+    
+    .nav-bar {
+    width: 100%;
+    background-color: #ffffff;
+    border-top: 1px solid #C0C0C0;
+    padding: 10px 0;
+    flex: 1;
+    }
+    
+    .nav-bar ul {
+      display: flex;
+      list-style-type: none;
+      padding: 0;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      align-items: baseline;
+    }
+    
+    .nav-bar ul li {
+      margin-right: 20px;
+      text-align: center;
+    }
+    
+    .nav-bar ul li a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #898989;
+    }
+    
+    .nav-bar ul li span {
+      padding-top: 10px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+    .nav-bar ul li .active {
+      color: #008636;
+    }
+    
+    .nav-bar a img {
+    display: inline-block;
+    }
+    
+    .nav-bar a.active img {
+    content: url('../../../assets/icon/activeHome.png'); 
+    }
+    
+    .nav-bar a.active img + span {
+    font-weight: bold; 
+    }
+
+    .image-container {
+        
+        padding: 0 5vw 0 5vw;
+      }
+      .image {
+        border-radius: 20px;
+      }
+      
+      .sensorContainer {
+        display: flex;
+        flex-direction: column;
+        min-height: 90vh;
+        padding-top: 15px;
+      }
+
+      .row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;        
+      }
+      
+      .col {
+        width: 35vw;
+        height: 15vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      .content-wrapper {
+        text-align: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .content-wrapper img {
+       width: auto;
+       height: 30px;
+    }
+
+    .content-wrapper .sensorTitle {
+        font-size: 18px;
+        font-weight: 600;
+        margin: 5px;
+        color: #ffffff;
+    }
+
+    .content-wrapper .sensorDegree {
+        font-size: 16px;
+        font-weight: 500;
+        color: #ffffff;
+        margin: 0;
+        padding-top: 10px;
+    }
+
+    .content-wrapper .waterTitle {
+        margin-top: 20px;
+    }
+
+    .content-wrapper .water {
+        margin-top: 14px;
+    }
+      
+      .green-background {
+        position: relative;
+        background-color: #008636;
+        border-radius: 25px;
+        padding: 10px;
+      }
+      
+      .active-background-light {
+        position: relative;
+        background-color: #008636;
+        border-radius: 25px;
+        padding: 10px;
+      }
+      .notActive-background-light {
+        position: relative;
+        background-color: #ffffff;
+        border: 1px solid grey;
+        border-radius: 25px;
+        padding: 10px;
+      }
+
+      .light {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 40px;
+        height: 40px;
+      }
+
+      .fan {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 40px;
+        height: 40px;
+      }
+      .notActiveLight-toggle{
+        background-color: gray;
+        border-radius: 20px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+      .activeLight-toggle {
+        --track-background: gray;
+        --track-background-checked:#16532F;
+        border-radius: 20px; 
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+
+      .active-background-fan {
+        position: relative;
+        background-color: #008636;
+        border-radius: 25px;
+        padding: 10px;
+      }
+      .notActive-background-fan {
+        position: relative;
+        background-color: #ffffff;
+        border: 1px solid grey;
+        border-radius: 25px;
+        padding: 10px;
+      }
+
+      .notActiveLight-toggle{
+        background-color: gray;
+        border-radius: 20px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+
+      .activeLight-toggle {
+        --track-background: gray;
+        --track-background-checked:#16532F;
+        border-radius: 20px; 
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+
+      .green-background-fan {
+        position: relative;
+        background-color: #008636;
+        border-radius: 25px;
+        padding: 10px;
+        
+      }
+      
+      .notActive-text-light {
+        text-align: center;
+        color:gray;
+      }
+      .active-text-light {
+        text-align: center;
+        color:rgb(255, 255, 255);
+      }
+
+      .fan-icon{
+        color: grey;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        font-size: xx-large;
+      }
+      
+      .notActive-text-fan {
+        text-align: center;
+        color:gray;
+      }
+      .active-text-fan {
+        text-align: center;
+        color:rgb(255, 255, 255);
+      }
+
+      .water-motor {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 40px;
+        height: 40px;
+      }
+      .notActiveWaterMotor-toggle{
+        background-color: gray;
+        border-radius: 20px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+      .activeWaterMotor-toggle {
+        --track-background: gray;
+        --track-background-checked:#16532F;
+        border-radius: 20px; 
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+
+      .active-background-water-motor {
+        position: relative;
+        background-color: #008636;
+        border-radius: 25px;
+        padding: 10px;
+      }
+      .notActive-background-water-motor {
+        position: relative;
+        background-color: #ffffff;
+        border: 1px solid grey;
+        border-radius: 25px;
+        padding: 10px;
+      }
+
+      .delete-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5vh;
+      }
+      
+      .delete-button {
+        display: flex;
+        justify-content: center; 
+        align-items: flex-start;
+        background-color: #ff0000; 
+        color: white; 
+        padding: 10px 20px;
+        border-radius: 5px;
+        width: 100%;
+      }
+      
+      .delete-button:hover {
+        background-color: #cc0000; 
+      }
+      
+      .trash-icon {
+        margin-right: 15px; 
+      }
+
+      .delete-text {
+        display: flex;
+        font-size: 20px;
+      }
+
+      ::ng-deep .toast-custom-class {
+        --background: #008636; 
+        color: #fff; 
+        top: 50%; 
+        transform: translateY(-50%); 
+      }

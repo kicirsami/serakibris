@@ -1,0 +1,111 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+.custom-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.39);
+  width: 80vw;
+}
+
+.custom-card-header {
+  padding: 20px;
+  text-align: center;
+}
+
+.img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img {
+  width: 20vw;
+  height: 100%;
+}
+
+.custom-card-content {
+  padding: 30px;
+}
+
+.custom-input {
+  margin-bottom: 2.5vh;
+}
+
+.custom-input input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #008636;
+  border-radius: 20px;
+  background-color: #ffffff;
+  color: #008636;
+}
+
+.custom-input input::placeholder {
+  color: #008636;
+}
+
+.custom-input input:focus {
+  outline: none;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(0, 134, 54, 0.2);
+  transition: box-shadow 0.3s ease
+}
+
+.forgot-password {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2vh;
+  margin-bottom: 5vh;
+}
+
+.forgotpswbtn {
+  text-transform: initial;
+  background-color: transparent;
+  border: none;
+  color: #008636;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.3s ease; 
+  display: inline-block; 
+}
+
+.forgotpswbtn:hover {
+  transition: transform 0.3s ease; 
+  transform: scale(1.1);
+}
+
+.forgotpswbtn:active {
+  transform: scale(1);
+  transition: transform 0.3s ease; 
+}
+
+.loginbtn {
+  width: 100%;
+  padding: 15px;
+  background-color: #008636;
+  border: none;
+  border-radius: 20px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 15px;
+  font-weight: bold;
+  border: 1px solid #008636; 
+}
+
+.loginbtn:hover {
+  background-color: #ffffff;
+  border: 1px solid #008636; 
+  color: #008636;
+  box-shadow: 0 0 0 3px rgba(0, 134, 54, 0.2);
+}
+
+.error-message {
+  color: #008636;
+}

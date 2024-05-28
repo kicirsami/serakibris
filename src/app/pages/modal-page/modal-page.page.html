@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Yeni Sera Ekle
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="dismissModal()"> <ion-icon class="close-button" name="close"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [scrollY]="false">
+  <ion-item>
+    <ion-label position="floating"><b>Cihaz Id</b></ion-label>
+    <ion-input type="text" [(ngModel)]="site_id"></ion-input>
++-
+    <ion-label position="floating"><b>Sera Adı</b></ion-label>
+    <ion-input type="text" [(ngModel)]="name"></ion-input>
+  </ion-item>
+  <ion-item class="no-line">
+  <ion-label for="file-upload" class="custom-file-upload" (click)="openFileInput()">Sera Fotoğrafı</ion-label>
+  <input id="file-upload" type="file" (change)="onFileSelected($event)">
+  </ion-item>
+ 
+  <ion-img *ngIf="selectedPhoto" [src]="selectedPhoto" alt="Seçilen fotoğraf"></ion-img>
+
+  <ion-button (click)="addSera()">Ekle</ion-button>
+</ion-content>
+

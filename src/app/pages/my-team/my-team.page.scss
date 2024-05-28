@@ -1,0 +1,50 @@
+.container {
+    background-color: #ffffff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+ion-back-button {
+    color: #008636;
+  }
+
+  ion-title {
+    color: #008636;
+    font-size: 20px;
+  }
+
+  .team-list {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #008636;
+    color: #008636;
+}
+
+td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #008636;
+    color: #000000;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.manager-title  {
+    color: #008636;
+    padding-right: 5px;
+}

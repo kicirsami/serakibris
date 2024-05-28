@@ -1,0 +1,24 @@
+<div class="container flex-center">
+  <div class="custom-card">
+    <div class="custom-card-header">
+      <div class="img-container">
+        <img src="/assets/icon/favicon.png" class="img" alt="Icon">
+      </div>
+    </div>
+    <div class="custom-card-content">
+      <div class="custom-input">
+        <input aria-label="username" placeholder="Kullanıcı Adı" class="custom" [(ngModel)]="username">
+      </div>
+      <div class="custom-input">
+        <input type="password" aria-label="sifre" placeholder="Şifre" class="custom" [(ngModel)]="password">
+      </div>
+      <!-- Hata Mesajı -->
+      <div class="error-message" *ngIf="hataMesaji">{{ hataMesaji }}</div>
+
+      <div class="forgot-password">
+        <button class="forgotpswbtn">Şifremi unuttum</button>
+      </div>
+      <button class="loginbtn" (click)="girisYap()">Giriş Yap</button>
+    </div>
+  </div>
+</div>

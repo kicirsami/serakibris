@@ -1,0 +1,65 @@
+<div class="container">
+  <div class="profile-container">
+  <div class="profile-picture">
+    <img [src]="userInfo && userInfo.img ? userInfo.img : (userInfo && userInfo.role_id === 1 ? '../../assets/image/executive.jpg' : (userInfo && userInfo.role_id === 2 ? '../../assets/image/worker.png' : ''))" alt="Profil Resmi">
+  </div>
+  <h1 class="username">{{userName}}</h1>
+    <p class="role">{{role}}</p>
+</div>
+<div class="li-container">
+<ul class="list" id="tiklanabilir-liste">
+    <a (click)="goToMyProfile()">
+      <li class="list">
+      <span class="li-icons"><img src="../../../assets/icon/person.png"></span>
+      Profilim
+      <span class="li-arrows"><img src="../../../assets/icon/arrow.png"></span>
+    </li>
+  </a>
+    <a (click)="addWorker()">
+     <li class="list">
+      <span class="li-icons"><img src="../../../assets/icon/add-employee-icon.png"></span>
+      Çalışan Ekle
+      <span class="li-arrows"><img src="../../../assets/icon/arrow.png"></span>
+     </li>
+    </a>
+    <a (click)="goToMyTeam()">
+      <li class="list">
+      <span class="li-icons"><img src="../../../assets/icon/team-icon.png"></span>
+      {{ getTeamButtonLabel() }}
+      <span class="li-arrows"><img src="../../../assets/icon/arrow.png"></span>
+      </li>
+    </a>
+    <a (click)="logout()">
+      <li class="list">
+      <span class="li-icons"><img src="../../../assets/icon/logout-24.png"></span>
+      Çıkış Yap
+      <span class="li-arrows"><img src="../../../assets/icon/arrow.png"></span>
+      </li>
+    </a>
+</ul>
+</div>
+<nav class="nav-bar">
+  <ul>
+    <li>
+      <a routerLink="/home">
+        <img src="../../../assets/icon/notActiveHome.png" alt="Anasayfa">
+        <span>Anasayfa</span>
+      </a>
+    </li>
+    <li>
+      <a (click)="onClickChat()">
+        <img src="../../../assets/icon/notActiveChat.png" alt="Sohbet">
+        <span>Sohbet</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/profile" routerLinkActive="active">
+        <img src="../../../assets/icon/notActiveProfile.png" class="active" alt="Profil">
+        <span>Profil</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+</div>
+
+

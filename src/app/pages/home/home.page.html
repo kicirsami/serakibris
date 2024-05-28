@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="title">
+    <div class="name-date">
+      <h1>Merhaba, <span>{{ userName }}</span></h1>
+      <p>{{ currentDate }}</p>
+    </div>
+    <div class="notification-container">
+      <button class="notification" aria-label="Notifications">
+        <img src="../../../assets/icon/Notification.png" alt="Notifications">
+      </button>
+    </div>
+    <div class="search-container">
+      <div class="search-inner">
+        <div class="search-icon">
+          <img src="../../../assets/icon/Search.png" alt="Search">
+        </div>
+        <input type="search" placeholder="Arama">
+      </div>
+    </div>
+  </div>
+  <div class="greenhouse-container">
+    <div class="greenhouse-title">
+        <h1>Seralarınız:</h1>
+    </div>
+    <div class="add-button">
+        <button (click)="openSeraEkleModal()">
+            <img src="../../../assets/icon/Add.png" alt="Artı İşareti"> Ekle
+        </button>
+    </div>
+</div>
+
+<div *ngFor="let sera of seralar" class="greenhouse-card">
+  <app-greenhouse-card 
+    [sera]="sera" 
+    (delete)="removeSera(sera)"
+    (click)="goToGreenhouse(sera['id'],sera['name'],sera['photo'])">
+  </app-greenhouse-card>
+</div>
+
+<nav class="nav-bar">
+  <ul>
+    <li>
+      <a routerLink="/home" routerLinkActive="active">
+        <img src="../../../assets/icon/activeHome.png" alt="Anasayfa" class="icon">
+        <span>Anasayfa</span>
+      </a>
+    </li>
+    <li>
+      <a (click)="onClickChat()" routerLinkActive="active">
+        <img src="../../../assets/icon/notActiveChat.png" alt="Sohbet" class="icon">
+        <span>Sohbet</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/profile" routerLinkActive="active">
+        <img src="../../../assets/icon/notActiveProfile.png" alt="Profil" class="icon">
+        <span>Profil</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+</div>

@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/profile" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ role_id === 1 ? 'Ekibim' : 'Ekip Arkadaşlarım' }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content scrollY="false">
+  <div class="container">
+    <div *ngIf="role_id === 2 && managerName" class="manager-info">
+      <p><span class="manager-title">Yöneticiniz:</span>{{ managerName }}</p>
+    </div>
+    <div class="team-list">
+      <table>
+        <thead>
+          <tr>
+            <th>Tam İsim</th>
+            <th>Telefon Numarası</th>
+            <th>Rol</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngIf="teamMembers && teamMembers.length > 0; else emptyState">
+            <tr *ngFor="let member of teamMembers">
+              <td>{{ member.fullname }}</td>
+              <td>{{ member.phone }}</td>
+              <td>{{ getRoleName(member.role_id) }}</td>
+            </tr>
+          </ng-container>
+          <ng-template #emptyState>
+            <tr>
+              <td colspan="3" class="empty-state">
+                {{ role_id === 1 ? 'Henüz kaydedilen bir çalışan yok' : 'Henüz kaydedilen ekip arkadaşı yok' }}
+              </td>
+            </tr>
+          </ng-template>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</ion-content>

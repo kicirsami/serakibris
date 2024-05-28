@@ -1,0 +1,145 @@
+.container {
+  background-color: #ffffff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.nav-bar {
+position: fixed;
+bottom: 0; 
+width: 100%; 
+}
+
+.nav-bar {
+width: 100%;
+background-color: #ffffff;
+border-top: 1px solid #C0C0C0;
+padding: 10px 0;
+flex: 1;
+}
+
+.nav-bar ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+.nav-bar ul li {
+  margin-right: 20px;
+  text-align: center;
+}
+
+.nav-bar ul li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #898989;
+}
+
+.nav-bar ul li span {
+  padding-top: 10px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.nav-bar ul li .active {
+  color: #008636;
+}
+
+.nav-bar a img {
+display: inline-block;
+}
+
+.nav-bar a.active img {
+content: url('../../../assets/icon/activeProfile.png'); /* Aktif durum için görüntüyü değiştir */
+}
+
+.nav-bar a.active img + span {
+font-weight: bold; /* Opsiyonel: Aktif durum için metni kalın yap */
+}
+
+.profile-container {
+  text-align: center;
+  margin-top: 70px;
+}
+
+.profile-picture {
+  width: 200px; 
+  height: 200px; 
+  border-radius: 50%;
+  border: 2px solid #008636;
+  overflow: hidden; 
+  margin: 0 auto; 
+}
+
+.profile-picture img {
+  width: 100%; 
+  height: 100%; 
+  display: block; 
+}
+.username {
+  color: #008636; 
+  margin-bottom: 5px;
+  margin-top:5px;
+  font-weight: bold;
+}
+
+.role {
+  font-size: 18px; 
+  color: #757575; 
+  margin-top: -5px;
+  font-weight: 500;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+.li-container{
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+}
+
+.list{
+    color: #008636;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.li-icons{
+  vertical-align: middle;
+  margin-right: 30px;
+  }
+
+.li-arrows{
+  vertical-align: middle;
+  float: inline-end;
+}
+
+
+.li-container li:hover {
+    background-color: #ddd;
+    width: 100%;
+}
+
+::ng-deep .toast-custom-class {
+  --background: #008636; // Arka plan rengi
+  color: #fff; // Yazı rengi
+  top: 50%; // Sayfanın üst kısmından yüksekliği %50'ye ayarlanır
+  transform: translateY(-50%); // Dikey hizalamayı ayarlar
+}
+
+
+  

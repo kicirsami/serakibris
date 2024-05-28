@@ -1,0 +1,33 @@
+<div class="greenhouse-card">
+    <div class="card">
+      <div class="card-content">
+        <div class="greenhouse-name">
+          <p>{{ sera?.name || 'Sera Adı' }}</p>
+        </div>
+        <div class="greenhouse-image">
+          <img [src]="sera?.img ? sera.img : '../../../assets/image/greenhouse.jpg'" alt="Profil Resmi">
+        </div>
+        <div class="greenhouse-details">
+          <div class="icons">
+            <div class="icon">
+              <img src="../../../assets/icon/heat-icon.png" alt="Temperature Icon">
+              <p>{{ sera?.temperature || 'N/A' }}</p>
+            </div>
+            <div class="icon">
+              <img [src]="sera?.light ? '../../../assets/icon/light-icon.png' : '../../../assets/icon/greenhousePageİcons/light-notActive-icon.png'" alt="Light Icon">
+              <p [ngClass]="{'active': sera?.light, 'inactive': !sera?.light}">{{ sera?.light ? 'Açık' : 'Kapalı' }}</p>
+            </div>
+            <div class="icon">
+              <img [src]="sera?.water_motor ? '../../../assets/icon/greenhousePageİcons/water-motor-icon.png' : '../../../assets/icon/greenhousePageİcons/water-motorNotActive-icon.png'" alt="Water Motor Icon">
+              <p [ngClass]="{'active': sera?.water_motor, 'inactive': !sera?.water_motor}">{{ sera?.water_motor ? 'Açık' : 'Kapalı' }}</p>
+            </div>
+            <div class="icon">
+              <img [src]="sera?.fan ? '../../../assets/icon/greenhousePageİcons/fanActive.png' : '../../../assets/icon/greenhousePageİcons/fan-notActive-icon.png'" alt="Fan Icon">
+              <p [ngClass]="{'active': sera?.fan, 'inactive': !sera?.fan}">{{ sera?.fan ? 'Açık' : 'Kapalı' }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

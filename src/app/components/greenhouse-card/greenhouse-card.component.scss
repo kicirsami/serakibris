@@ -1,0 +1,127 @@
+.greenhouse-card {
+    margin-top: 2vh;
+    padding: 3.5vw;
+}
+
+.card-header {
+    position: relative;
+}
+
+.trash-icon {
+    position: absolute; /* İçeriden konumlandırmak için */
+    top: 4.5vh; /* Üst kenardan dikey merkezleme */
+    right: 4.5vw; /* Sol kenardan yatay merkezleme */
+    transform: translate(-50%, -50%);
+}
+
+.trash-icon img {
+    display: block;
+    height: 18px;
+    width: 18px;
+    height: auto;
+}
+
+.trash-icon::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px; /* Yuvarlağın genişliği */
+    height: 50px; /* Yuvarlağın yüksekliği */
+    border-radius: 50%; /* Yuvarlağın köşelerinin yuvarlatılması */
+    background-color: #008636; /* Yeşil arka plan rengi */
+    z-index: -1; /* Resmin arkasında olmasını sağlamak için */
+}
+
+.card-content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.432);
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+
+.greenhouse-name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #008636;
+    color: white;
+    padding: 5px 10px;
+    border-top-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    z-index: 1;
+}
+
+.greenhouse-image {
+    height: 20vh; 
+    width: 100%;
+}
+
+.greenhouse-image img {
+    width: 100%;
+    height: 20vh; 
+    object-fit: cover;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.greenhouse-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+
+.greenhouse-details h2 {
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.greenhouse-details p {
+    margin: 0;
+    color: #555;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 6.5vw;
+}
+
+.icon img {
+    width: auto; 
+    height: 100%; 
+}
+
+.icon p {
+    margin-top: 10px; 
+    text-align: center;
+    color: #555; /* Default color */
+}
+
+.icon .active {
+    color: #000; /* Color when active */
+}
+
+.icon .inactive {
+    color: #555; /* Color when inactive */
+}

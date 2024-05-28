@@ -1,0 +1,35 @@
+  <div class="container">
+    <div class="chat-container">
+      <div class="message-container">
+        <div class="message outgoing">Merhaba!</div>
+        <div class="message incoming">Merhaba! Nasılsınız?</div>
+        <!-- Buraya gelen ve giden mesajlar gelecek -->
+      </div>
+      <div class="input-container">
+        <input type="text" placeholder="Mesajınızı yazın...">
+        <button>Gönder</button>
+      </div>
+  </div>
+  <nav class="nav-bar">
+      <ul>
+        <li>
+          <a routerLink="/home" routerLinkActive="active">
+            <img src="../../../assets/icon/notActiveHome.png" alt="Anasayfa" class="icon">
+            <span>Anasayfa</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/chat" routerLinkActive="active">
+            <img src="../../../assets/icon/notActiveChat.png" alt="Sohbet" class="icon">
+            <span>Sohbet</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/profile" routerLinkActive="active">
+            <img src="../../../assets/icon/notActiveProfile.png" alt="Profil" class="icon">
+            <span>Profil</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>

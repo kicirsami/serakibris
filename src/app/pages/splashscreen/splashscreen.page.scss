@@ -1,0 +1,115 @@
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #008636;
+  }
+  
+  .image-container {
+    position: relative;
+  }
+  
+  .centered-image {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 0 0 20px 20px;
+  }
+  
+  .logo-container {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .logo {
+    position: relative;
+  
+  }
+  
+  .overlay {
+    position: absolute;
+    width: 90px; 
+    height: 90px; 
+    border-radius: 50%;
+    box-shadow: inset 0 0 100px 5px rgba(255, 255, 255, 0.185);
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+  }
+  
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    text-align: center;
+    
+  }
+  
+  .first-text {
+    font-size: 10vw;
+    margin-bottom: 10px;
+    font-weight: bold;
+    padding: 0 10vw;
+  }
+  
+  .second-text {
+    font-size: 3.5vw;
+    font-weight: bold;
+    padding: 0 15vw 20vw 15vw;
+    
+  }
+  
+  .custom-button {
+    padding: 4vw 18vw;
+    background-color: #ffffff;
+    color: #008636;
+    border: none;
+    border-radius: 27.5px;
+    font-size: 4.5vw;
+    font-weight: bold;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+  }
+  
+  .custom-button:hover {
+    background-color: #008636;
+    color: #ffffff;
+    border-color: #ffffff;
+    box-shadow: 0 5px 20px rgba(0, 27, 7, 0.671);
+  }
+  
+  @media screen and (max-height: 667px) {
+    .first-text {
+      font-size: 7vw;
+      padding: 5vw 6vw 0 6vw;
+    }
+  
+    .second-text {
+      font-size: 3vw;
+      padding: 0 10vw 5vw 10vw;
+    }
+  
+    .custom-button {
+      padding: 3vw 6vw;
+      font-size: 4vw;
+      
+    }
+  }
+  
+  
+  @media screen and (min-width: 768px) {
+    .text-container {
+      margin-top: 20vh; 
+    }
+  
+    .logo-container {
+      top: 150px; 
+    }
+  }

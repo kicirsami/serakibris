@@ -1,0 +1,7 @@
+{
+  "name": "serakibris",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
