@@ -7,7 +7,7 @@ Arduino tabanlı sensörler, sera ortamındaki ışık, fan, su motoru, toprak n
 Kullanıcılar, mobil uygulama aracılığıyla sera koşullarını takip edebilir, gerektiğinde ayarlamalar yapabilir ve otomatik kontrol özelliklerini kullanarak sera ortamını optimize edebilirler.
 ## Katkıda Bulunanlar
 - [kicirsami] - Arduino geliştirme, mobil uygulama backend, API, Veritabanı ilişkileri
-- [CodeWithMuzo] - Önyüz geliştirmeleri
+- [CodeWithMuzo] - Mobil uygulama Front geliştirmeleri
   
 ## İçindekiler
 
