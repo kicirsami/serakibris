@@ -39,3 +39,19 @@
 ion-page {
     background: white;
 }
+
+.custom-alert-overlay {
+    background-color: rgba(0, 0, 0, 0.726);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.74);
+  }
+
+  .alert-title.sc-ion-alert-ios {
+    font-size: 25px;
+    color: red!important;
+  }
+
+  .alert-message.sc-ion-alert-ios {
+    font-size: 15px!important;
+    color: rgb(0, 0, 0)!important;
+  }

@@ -291,7 +291,10 @@
   background-color: #0056b3;
 }
 
-
+.alert-wrapper {
+  background-color: rgba(255, 255, 255, 0.9); // Alert arka planını belirginleştir
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Hafif bir gölge ekleyerek alerti ön plana çıkar
+}
   
   
   
