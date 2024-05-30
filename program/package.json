@@ -1,0 +1,29 @@
+{
+  "name": "program",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "i": "^0.3.7",
+    "multer": "^1.4.5-lts.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.9.7",
+    "npm": "^10.7.0",
+    "sequelize": "^6.37.3",
+    "sequelize-msnodesqlv8": "^0.2.6-beta.8",
+    "serialport": "^12.0.0",
+    "sf": "^0.2.0",
+    "socket.io": "^4.7.5",
+    "tedious": "^18.2.0"
+  }
+}
